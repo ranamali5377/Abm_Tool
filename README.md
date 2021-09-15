@@ -7,6 +7,6 @@
 [+] pkg update && pkg upgrade
 [+] pkg install git -y
 [+] git clone https://github.com/Tech-abm/Abm_Tool
-[+] cd Abm_Tool && Aarch64-Android
+[+] cd Abm_Tool && cd Aarch64-Android
 [+] chmod 777 tool && ./tool
 ```
