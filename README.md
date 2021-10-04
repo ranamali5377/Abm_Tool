@@ -8,7 +8,7 @@
 ```
 [+] pkg update && pkg upgrade
 [+] pkg install git -y
-[+] pkg install php -y
 [+] git clone https://github.com/Tech-abm/Abm_Tool
-[+] cd Abm_Tool && php main.php
+[+] cd Abm_Tool
+[+] bash main.sh
 ```
