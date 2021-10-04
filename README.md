@@ -8,7 +8,8 @@
 ```
 [+] pkg update && pkg upgrade
 [+] pkg install git -y
+[+] pkg install python -y
 [+] git clone https://github.com/Tech-abm/Abm_Tool
 [+] cd Abm_Tool
-[+] bash main.sh
+[+] python install.py
 ```
