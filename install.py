@@ -31,7 +31,7 @@ def main():
 def mx():
     knock = raw_input("[!] choose input : ")
     if knock =="1":
-        os.system("cd pool && python pool")
+        os.system("cd pool && python2 pool")
     if knock =="2":
         os.system("cd tool && python2 tool")
     if knock =="0":
