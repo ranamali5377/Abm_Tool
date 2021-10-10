@@ -20,6 +20,8 @@ def logo():
 def main():
     os.system("clear")
     logo()
+    os.system('uname -om')
+    print('')
     print("[1] Install Abm-Tool 32bit Platform")
     time.sleep(0.05)
     print("[2] Install Abm-Tool 64bit Platform")
