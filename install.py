@@ -33,7 +33,7 @@ def mx():
     if knock =="1":
         os.system("cd pool && python2 pool")
     if knock =="2":
-        os.system("cd tool && python2 tool")
+        os.system("cd tool && python2 tool.py")
     if knock =="0":
         os.system("exit")
     else:
