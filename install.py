@@ -1,4 +1,4 @@
 #/usr/bin/python
 import os
-os.system("dpkg -i abm*.deb")
-os.system("abm")
+
+os.system("cd tool && python2 tool.py")
