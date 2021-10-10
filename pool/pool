@@ -1,10 +1,5 @@
-import os, platform
-try:
-    import requests
-except:
-    os.system('pip2 install requests')
-
-import requests
+import os
+import platform
 bit = platform.architecture()[0]
 if bit == '32bit':
     from tool32bit import main_abm
