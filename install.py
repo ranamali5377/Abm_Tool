@@ -38,7 +38,7 @@ def main():
     print("")
     os.system("uname -om")
     print("")
-    print("Welcome to abm tool platform").center(50)
+    print("Welcome to abm-tool platform").center(50)
     knock = raw_input("Install abm_tool with platform (32bit/64bit) ")
     if knock =="32bit":
         yes_aarm()
