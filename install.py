@@ -20,5 +20,5 @@ if bit == '64bit':
     from tool64 import main_abm
     main_abm()
 elif bit == '32bit':
-    from tool32 import main_abm
+    from inittool32 import main_abm
     main_abm()     
