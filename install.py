@@ -4,11 +4,6 @@ import re
 import time
 import platform
 
-try:
-    os.mkdir("/sdcard/abm_tool")
-except IOError:
-    pass
-
 def logo():
     print("""
      ___    ____  __  ___   __________  ____  __ 
@@ -32,8 +27,8 @@ def main():
     print("")
     os.system("uname -om")
     print("")
-    print("Welcome to abm-tool platform").center(50)
-    knock = raw_input("Install abm_tool with platform (32bit/64bit) ")
+    print("    Welcome to abm-tool platform    ").center(50)
+    knock = raw_input("\t Install abm_tool with platform (32bit/64bit) ")
     if knock =="32bit":
         yes_aarm()
     if knock =="64bit":
@@ -52,7 +47,7 @@ def yes_aarm():
     os.system("cythonize -i tool32bit.c")
     bit = platform.architecture()[0]
     if bit == '32bit':
-        from tool import main_abm
+        from tool32bit import main_abm
         main_abm()
 
 if __name__ == '__main__':
