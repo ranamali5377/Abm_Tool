@@ -4,8 +4,7 @@ import re
 import time
 import platform
 
-def logo():
-    print("""
+logo = """
      ___    ____  __  ___   __________  ____  __ 
     /   |  / __ )/  |/  /  /_  __/ __ \/ __ \/ / 
    / /| | / __  / /|_/ /    / / / / / / / / / /  
@@ -16,18 +15,18 @@ def logo():
 (~) Github  : https://github.com/Tech-abm
 (~) Fb Page : https://facebook.com/Techabm
 --------------------------------------------------                                             
-""")
+"""
 
 def main():
     os.system("clear")
-    logo()
+    print(logo)
     os.system("uname -om")
     print("")
     print("Welcome to abm-tool platform ").center(50)
     knock = raw_input("\tInstall abm_tool with platform (32bit/64bit) ")
     if knock =="32bit":
         os.system("cd cool && python2 cool")
-    if knock =="64bit":
+    elif knock =="64bit":
         os.system("cd tool && python2 tool")
     else:
         print("")
