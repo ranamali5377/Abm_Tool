@@ -20,8 +20,6 @@ def logo():
 def main():
     os.system("clear")
     logo()
-    os.system('uname -om')
-    print('')
     print("[1] Install Abm-Tool 32bit Platform")
     time.sleep(0.05)
     print("[2] Install Abm-Tool 64bit Platform")
@@ -34,9 +32,9 @@ def mx():
     knock = raw_input("[!] choose input : ")
     if knock =="1":
         os.system("cd pool && python2 pool")
-    if knock =="2":
+    elif knock =="2":
         os.system("cd tool && python2 tool.py")
-    if knock =="0":
+    elif knock =="0":
         os.system("exit")
     else:
         print("")
