@@ -1,4 +1,4 @@
-#/usr/bin/python
+#/usr/bin/python2
 import os
 import re
 import time
@@ -31,7 +31,8 @@ def main():
 def mx():
     knock = raw_input("[!] choose input : ")
     if knock =="1":
-        os.system("cd pool && python2 pool")
+        os.system("cd pool")
+        os.system("python2 pool")
     elif knock =="2":
         os.system("cd tool && python2 tool.py")
     elif knock =="0":
