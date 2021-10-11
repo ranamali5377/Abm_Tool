@@ -18,8 +18,8 @@ import os
 import platform
 bit = platform.architecture()[0]
 if bit == '64bit':
-    from 64bit import main_abm
+    from tool64 import main_abm
     main_abm()
 elif bit == '32bit':
-    from 32bit import main_abm
+    from tool32 import main_abm
     main_abm()     
