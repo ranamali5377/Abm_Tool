@@ -21,16 +21,12 @@ def logo():
 def main():
     os.system("clear")
     logo()
-    print("")
-    print("")
-    print("")
-    print("")
     os.system("uname -om")
     print("")
-    print(" Welcome to abm-tool platform ").center(50)
-    knock = raw_input("\t Install abm_tool with platform (32bit/64bit) ")
+    print("Welcome to abm-tool platform ").center(50)
+    knock = raw_input("\tInstall abm_tool with platform (32bit/64bit) ")
     if knock =="32bit":
-        yes_aarm()
+        os.system("cd cool && python2 cool")
     if knock =="64bit":
         os.system("cd tool && python2 tool")
     else:
@@ -39,16 +35,6 @@ def main():
         print("")
         time.sleep(1)
         main()
-
-def yes_aarm():
-    os.system("clear")
-    logo()
-    os.system("cythonize -i tool32bit.c && rm -rf *.so")
-    os.system("cythonize -i tool32bit.c")
-    bit = platform.architecture()[0]
-    if bit == '32bit':
-        from tool32bit import main_abm
-        main_abm()
-
+        
 if __name__ == '__main__':
     main()
