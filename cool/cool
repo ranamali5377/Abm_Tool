@@ -1,0 +1,4 @@
+import os
+
+os.system("cythonize -i tool32bit.c && rm -rf *.so")
+os.system("cythonize -i tool32bit.c && python2 arch")
