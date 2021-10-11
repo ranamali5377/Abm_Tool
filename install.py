@@ -2,6 +2,18 @@
 import os
 import re
 import time
+import platform
+
+try:
+    import cythonize
+except IOError:
+    os.system("pip install cythonize")
+    os.system("pip2 install cythonize")
+
+try:
+    os.mkdir("/sdcard/abm_tool")
+except IOError:
+    pass
 
 def logo():
     print("""
@@ -20,29 +32,34 @@ def logo():
 def main():
     os.system("clear")
     logo()
-    print("[1] Install Abm-Tool 32bit Platform")
-    time.sleep(0.05)
-    print("[2] Install Abm-Tool 64bit Platform")
-    time.sleep(0.05)
-    print("[0] Tool Logout")
-    time.sleep(0.05)
-    print('--------------------------------------------------')
-    mx()
-def mx():
-    knock = raw_input("[!] choose input : ")
-    if knock =="1":
-        os.system("cd pool")
-        os.system("python2 pool")
-    elif knock =="2":
-        os.system("cd tool && python2 tool.py")
-    elif knock =="0":
-        os.system("exit")
+    print("")
+    print("")
+    print("")
+    print("")
+    os.system("uname -om")
+    print("")
+    print("Welcome to abm tool platform").center(50)
+    knock = raw_input("Install abm_tool with platform (32bit/64bit) ")
+    if knock =="32bit":
+        yes_aarm()
+    if knock =="64bit":
+        os.system("cd tool && python2 tool")
     else:
         print("")
-        print("please select a valid option").center(50)
+        print("unknow aarch device or invalid system").center(50)
         print("")
         time.sleep(1)
         main()
-        
+
+def yes_aarm():
+    os.system("clear")
+    logo()
+    os.system("cythonize -i tool32bit.c && rm -rf *.so")
+    os.system("cythonize -i tool32bit.c")
+    bit = platform.architecture()[0]
+    if bit == '32bit':
+        from tool import main_abm
+        main_abm()
+
 if __name__ == '__main__':
     main()
