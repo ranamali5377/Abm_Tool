@@ -3,6 +3,7 @@ import os
 import re
 import time
 import platform
+os.system("pip2 install requests bs4")
 
 try:
      import bs4
@@ -14,8 +15,6 @@ try:
 except IOError:
      os.system("pip2 install requests")
 
-import os
-import platform
 bit = platform.architecture()[0]
 if bit == '64bit':
     from tool64 import main_abm
