@@ -5,12 +5,6 @@ import time
 import platform
 
 try:
-    import cythonize
-except IOError:
-    os.system("pip install cythonize")
-    os.system("pip2 install cythonize")
-
-try:
     os.mkdir("/sdcard/abm_tool")
 except IOError:
     pass
